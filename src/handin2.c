@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    int i,j, smallest,c,check;
+    int i,j, smallest,c=0,check, mogens, div, gcd;
 
     while (1)
     {
@@ -17,16 +17,18 @@ int main(void)
 
         smallest = i <= j ? i : j;
 
+        smallest /= 2;
+
+
         for(c = smallest; check < 1; c--)
         {
-            int cj = j%c;
-            int ci = i%c;
-            if((ci == 0) && (cj == 0))
+            if((i%c == 0) && (j%c == 0))
             {
-                printf("Greatest common divisor of %d and %d is %d",i, j, c);
+                printf("Greatest common divisor of %d and %d is %d\n",i, j, c);
                 check = 1;
             }
         }
+
 
 
 
