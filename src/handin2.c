@@ -17,8 +17,6 @@ int main(void)
 
         smallest = i <= j ? i : j;
 
-        smallest /= 2;
-
 
         for(c = smallest; check < 1; c--)
         {
